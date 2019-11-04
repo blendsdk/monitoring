@@ -1,0 +1,38 @@
+{
+  "name": "terraindex-status-monitor",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@gitlab.com:it-works/terraindex-status-monitor.git",
+  "author": "Max Ossadtchii <max@gterraindex.com>",
+  "license": "MIT",
+  "bin": {
+    "ti-status-monitor": "./dist/index.js"
+  },
+  "scripts": {
+    "lint": "tslint -p ./tsconfig.json --fix",
+    "build": "rm -fR ./dist ./temp && tsc && yarn lint",
+    "watch": "rm -fR ./dist && tsc -w ",
+    "test": "jest --detectOpenHandles --passWithNoTests"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.21",
+    "@types/node": "^12.12.5",
+    "@types/superagent": "^4.1.4",
+    "@types/supertest": "^2.0.8",
+    "jest": "^24.9.0",
+    "typescript": "^3.6.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "chalk": "^2.4.2",
+    "commander": "^4.0.0",
+    "concurrently": "^5.0.0",
+    "cross-env": "^6.0.3",
+    "nodemon": "^1.19.4",
+    "superagent": "^5.1.0",
+    "supertest": "^4.0.2",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0"
+  }
+}
